@@ -39,7 +39,7 @@ public class Person {
 
     public OptionalInt getAge() {
         if (age.isEmpty() || age == null) {
-            throw new IllegalArgumentException("Некорекьный возраст");
+            throw new IllegalArgumentException("Некорректный возраст");
         }
         return age;
     }
