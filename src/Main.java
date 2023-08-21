@@ -8,9 +8,6 @@ public class Main {
             mom.happyBirthday();
             System.out.println("Прошло день рождение мымы, ей теперь " + mom.getAge().getAsInt());
         }
-
-        
-
         try {
             // Не хватает обяхательных полей
             new PersonBuilder().setName("Анна").build();
