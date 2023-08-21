@@ -4,18 +4,6 @@ public class Main {
         Person son = mom.newChildBuilder().setName("Антошка").build();
         System.out.println("У " + mom + " есть сын, " + son);
 
-        if (mom.hasAge()) {
-            mom.happyBirthday();
-            System.out.println("Прошло день рождение мымы, ей теперь " + mom.getAge().getAsInt());
-        }
-
-        try {
-            // Нельзя переприсвоить новый возраст
-            mom.setAge(50);
-        } catch (IllegalStateException e) {
-            e.printStackTrace();
-        }
-
         try {
             // Не хватает обяхательных полей
             new PersonBuilder().setName("Анна").build();

@@ -38,6 +38,8 @@ public class Person {
 
 
     public OptionalInt getAge() {
+        if (age.isEmpty() || age == null) {
+        }
         return age;
     }
 
