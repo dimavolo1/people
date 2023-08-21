@@ -1,6 +1,8 @@
 import java.util.Objects;
 import java.util.OptionalInt;
 
+import static java.util.OptionalInt.empty;
+
 public class Person {
     private final String name;
     private final String surname;
@@ -14,7 +16,7 @@ public class Person {
     public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;
-        age = OptionalInt.empty();
+        age = empty();
     }
 
     public Person(String name, String surname, String address, int age) {
@@ -38,10 +40,7 @@ public class Person {
 
 
     public OptionalInt getAge() {
-        if (age.isEmpty() || age == null) {
-            throw new IllegalArgumentException("Некорекьный возраст");
-        }
-        return age;
+        return empty();
     }
 
     public void setAge(int age) {
