@@ -40,7 +40,10 @@ public class Person {
 
 
     public OptionalInt getAge() {
-        return empty();
+        if (age == null || age.isEmpty()) {
+            return empty();
+        }
+        return age;
     }
 
     public void setAge(int age) {
